@@ -45,7 +45,7 @@
 | address             | string     | null: false                    |
 | building_name       | string     |                                |
 | tel_num             | string     | null: false                    |
-| purchase_record_id  | references | null: false, foreign_key: true |
+| purchase_record     | references | null: false, foreign_key: true |
 
 ## purchase_recordsテーブル
 
