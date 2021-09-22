@@ -47,6 +47,9 @@
 | tel_num             | string     | null: false                    |
 | purchase_record     | references | null: false, foreign_key: true |
 
+### Association
+- belongs_to :purchase_record
+
 ## purchase_recordsテーブル
 
 | Column  | Type       | Options                        |
