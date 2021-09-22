@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="0TDGKuJNJz5VuVz-Sy0O" name="ページ1">
-        <mxGraphModel dx="1235" dy="952" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="796" dy="1142" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -105,7 +105,7 @@
                 <mxCell id="31" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="26">
                     <mxGeometry y="120" width="385" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" value="- category" style="shape=partialRectangle;connectable=0;fillColor=#f9f7ed;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontSize=20;strokeColor=#36393d;fontColor=#000000;" vertex="1" parent="31">
+                <mxCell id="32" value="- category_id" style="shape=partialRectangle;connectable=0;fillColor=#f9f7ed;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontSize=20;strokeColor=#36393d;fontColor=#000000;" vertex="1" parent="31">
                     <mxGeometry width="385" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="81" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="26">
@@ -153,16 +153,16 @@
                 <mxCell id="35" value="- date_of_birthday" style="shape=partialRectangle;connectable=0;fillColor=#f9f7ed;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontSize=20;strokeColor=#36393d;fontColor=#000000;" vertex="1" parent="1">
                     <mxGeometry x="50" y="400" width="387.6" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="36" value="- item_status" style="shape=partialRectangle;connectable=0;fillColor=#f9f7ed;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontSize=20;strokeColor=#36393d;fontColor=#000000;" vertex="1" parent="1">
+                <mxCell id="36" value="- item_status_id" style="shape=partialRectangle;connectable=0;fillColor=#f9f7ed;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontSize=20;strokeColor=#36393d;fontColor=#000000;" vertex="1" parent="1">
                     <mxGeometry x="651" y="240" width="385" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="37" value="- shipping_charges" style="shape=partialRectangle;connectable=0;fillColor=#f9f7ed;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontSize=20;strokeColor=#36393d;fontColor=#000000;" vertex="1" parent="1">
+                <mxCell id="37" value="- shipping_charge_id" style="shape=partialRectangle;connectable=0;fillColor=#f9f7ed;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontSize=20;strokeColor=#36393d;fontColor=#000000;" vertex="1" parent="1">
                     <mxGeometry x="651" y="280" width="385" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="38" value="- shipping_location" style="shape=partialRectangle;connectable=0;fillColor=#f9f7ed;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontSize=20;strokeColor=#36393d;fontColor=#000000;" vertex="1" parent="1">
-                    <mxGeometry x="651" y="320" width="385" height="40" as="geometry"/>
+                <mxCell id="38" value="- prefecture_id" style="shape=partialRectangle;connectable=0;fillColor=#f9f7ed;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontSize=20;strokeColor=#36393d;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="652" y="320" width="385" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="39" value="- days_required" style="shape=partialRectangle;connectable=0;fillColor=#f9f7ed;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontSize=20;strokeColor=#36393d;fontColor=#000000;" vertex="1" parent="1">
+                <mxCell id="39" value="- required_day_id" style="shape=partialRectangle;connectable=0;fillColor=#f9f7ed;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontSize=20;strokeColor=#36393d;fontColor=#000000;" vertex="1" parent="1">
                     <mxGeometry x="650" y="360" width="385" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="40" value="- price" style="shape=partialRectangle;connectable=0;fillColor=#f9f7ed;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontSize=20;strokeColor=#36393d;fontColor=#000000;" vertex="1" parent="1">
