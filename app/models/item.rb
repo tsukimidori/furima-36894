@@ -15,6 +15,6 @@ class Item < ApplicationRecord
   belongs_to :category, :item_status, :shipping_charge, :prefecture, :required_day
 
   with_options format: { with: /\A[0-9]+\d\z/, message: "is invalid. Input half-width characters"} do
-    validates :price, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999, message: "is out of setting range"}
+    validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999, message: "is out of setting range"}
   end
 end
