@@ -22,7 +22,7 @@
 | Column             | Type       | Options                        |
 |--------------------|------------|--------------------------------|
 | item_name          | string     | null: false                    |
-| item_text          | string     | null: false                    |
+| item_text          | text       | null: false                    |
 | category_id        | integer    | null: false                    |
 | item_status_id     | integer    | null: false                    |
 | shipping_charge_id | integer    | null: false                    |
