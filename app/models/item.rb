@@ -12,7 +12,11 @@ class Item < ApplicationRecord
 
   belongs_to :user
   has_one_attached :image
-  belongs_to :category, :item_status, :shipping_charge, :prefecture, :required_day
+  belongs_to :category
+  belongs_to :item_status
+  belongs_to :shipping_charge
+  belongs_to :prefecture
+  belongs_to :required_day
 
   with_options format: { with: /\A[0-9]+\d\z/, message: "is invalid. Input half-width characters"} do
     validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999, message: "is out of setting range"}
