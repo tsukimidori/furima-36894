@@ -30,6 +30,11 @@ RSpec.describe RecordAddress, type: :model do
         @order.valid?
         expect(@order.errors.full_messages).to include("Item can't be blank")
       end
+      it 'token（クレカ情報）がない場合' do
+        @order.token = nil
+        @order.valid?
+        expect(@order.errors.full_messages).to include("Token can't be blank")
+      end
       it '郵便番号の値が入力されていない場合' do
         @order.postal_code = ''
         @order.valid?
