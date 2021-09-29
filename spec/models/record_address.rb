@@ -41,7 +41,7 @@ RSpec.describe RecordAddress, type: :model do
         expect(@order.errors.full_messages).to include("Postal code can't be blank")
       end
       it '都道府県の値が未選択（「---」を選択）の場合' do
-        @order.prefecture_id = '1'
+        @order.prefecture_id = 1
         @order.valid?
         expect(@order.errors.full_messages).to include("Prefecture can't be blank")
       end
