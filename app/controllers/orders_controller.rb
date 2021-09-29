@@ -13,7 +13,13 @@ class OrdersController < ApplicationController
       @order.save
       redirect_to root_path
     else
+      @item = Item.find(params[:item_id])
       render :index
     end
+  end
+
+  private
+  def order_params
+    params.require(:record_address).permit(:postal_code, :prefecture_id, :municipalities, :address, :building_name, :tel_num).merge(user_id: current_user.id, item_id: params[:item_id])
   end
 end
