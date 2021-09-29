@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
   before_action :item_set
+  before_action :move_top_page
 
   def index
     @order = RecordAddress.new
@@ -20,6 +21,12 @@ class OrdersController < ApplicationController
   private
   def item_set
     @item = Item.find(params[:item_id])
+  end
+
+  def move_top_page
+    if PurchaseRecord.exists?(item_id: @item.id) || current_user.id == @item.user_id
+      redirect_to root_path
+    end
   end
 
   def order_params
