@@ -80,6 +80,11 @@ RSpec.describe RecordAddress, type: :model do
         @order.valid?
         expect(@order.errors.full_messages).to include("Tel num is too short")
       end
+      it '電話番号の桁数が12以上の場合' do
+        @order.tel_num = '090123456789'
+        @order.valid?
+        expect(@order.errors.full_messages).to include("Tel num is too short")
+      end
       it '電話番号に-(ハイフン)など半角数字以外の値を入力している場合' do
         @order.tel_num = '090-1234-5678'
         @order.valid?
