@@ -23,72 +23,72 @@ RSpec.describe RecordAddress, type: :model do
       it 'userが紐付いていない場合' do
         @order.user_id = nil
         @order.valid?
-        expect(@order.errors.full_messages).to include("User can't be blank")
+        expect(@order.errors.full_messages).to include("ユーザー（購入者）を入力してください")
       end
       it 'itemが紐付いていない場合' do
         @order.item_id = nil
         @order.valid?
-        expect(@order.errors.full_messages).to include("Item can't be blank")
+        expect(@order.errors.full_messages).to include("商品を入力してください")
       end
       it 'token（クレカ情報）がない場合' do
         @order.token = nil
         @order.valid?
-        expect(@order.errors.full_messages).to include("Token can't be blank")
+        expect(@order.errors.full_messages).to include("クレジットカード情報を入力してください")
       end
       it '郵便番号の値が入力されていない場合' do
         @order.postal_code = ''
         @order.valid?
-        expect(@order.errors.full_messages).to include("Postal code can't be blank")
+        expect(@order.errors.full_messages).to include("郵便番号を入力してください")
       end
       it '都道府県の値が未選択（「---」を選択）の場合' do
         @order.prefecture_id = 1
         @order.valid?
-        expect(@order.errors.full_messages).to include("Prefecture can't be blank")
+        expect(@order.errors.full_messages).to include("都道府県を選択してください")
       end
       it '市区町村の値が入力されていない場合' do
         @order.municipalities = ''
         @order.valid?
-        expect(@order.errors.full_messages).to include("Municipalities can't be blank")
+        expect(@order.errors.full_messages).to include("市区町村を入力してください")
       end
       it '番地の値が入力されていない場合' do
         @order.address = ''
         @order.valid?
-        expect(@order.errors.full_messages).to include("Address can't be blank")
+        expect(@order.errors.full_messages).to include("番地を入力してください")
       end
       it '電話番号の値が入力されていない場合' do
         @order.tel_num = ''
         @order.valid?
-        expect(@order.errors.full_messages).to include("Tel num can't be blank")
+        expect(@order.errors.full_messages).to include("電話番号を入力してください")
       end
       it '郵便番号に半角数字以外で値を入力している場合' do
         @order.postal_code = 'abc-4567'
         @order.valid?
-        expect(@order.errors.full_messages).to include("Postal code is invalid. Enter it as follows (e.g. 123-4567)")
+        expect(@order.errors.full_messages).to include("郵便番号は例のように入力してください (例：123-4567)")
       end
       it '郵便番号の値の桁数が間違っている場合' do
         @order.postal_code = '12-345678'
         @order.valid?
-        expect(@order.errors.full_messages).to include("Postal code is invalid. Enter it as follows (e.g. 123-4567)")
+        expect(@order.errors.full_messages).to include("郵便番号は例のように入力してください (例：123-4567)")
       end
       it '郵便番号に-(ハイフン)なしで値を入力している場合' do
         @order.postal_code = '1234567'
         @order.valid?
-        expect(@order.errors.full_messages).to include("Postal code is invalid. Enter it as follows (e.g. 123-4567)")
+        expect(@order.errors.full_messages).to include("郵便番号は例のように入力してください (例：123-4567)")
       end
       it '電話番号の桁数が10未満の場合' do
         @order.tel_num = '090123456'
         @order.valid?
-        expect(@order.errors.full_messages).to include("Tel num is too short")
+        expect(@order.errors.full_messages).to include("電話番号は10~11桁で入力してください")
       end
       it '電話番号の桁数が12以上の場合' do
         @order.tel_num = '090123456789'
         @order.valid?
-        expect(@order.errors.full_messages).to include("Tel num is too short")
+        expect(@order.errors.full_messages).to include("電話番号は10~11桁で入力してください")
       end
       it '電話番号に-(ハイフン)など半角数字以外の値を入力している場合' do
         @order.tel_num = '090-1234-5678'
         @order.valid?
-        expect(@order.errors.full_messages).to include("Tel num is invalid. Input only number")
+        expect(@order.errors.full_messages).to include("電話番号は半角数字のみで入力してください")
       end
     end
   end
